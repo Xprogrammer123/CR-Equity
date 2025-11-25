@@ -14,10 +14,10 @@ const CTASection = () => {
           accelerating your career growth.
         </p>
         <div className="flex justify-center gap-4">
-          <button className="bg-white text-[#1370AA] px-6 py-4 font-semibold shadow-3xl rounded-lg transition">
+          <button className="bg-white text-[#1370AA] px-6 py-4 font-semibold shadow-2xl rounded-lg transition">
             Explore open opportunities
           </button>
-          <button className="text-white px-6 rounded-lg bg-[#1370AA] transition font-semibold shadow-3xl">
+          <button className="text-white px-6 rounded-lg bg-[#1370AA] transition font-semibold shadow-2xl">
             Watch Success Stories
           </button>
         </div>

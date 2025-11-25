@@ -4,7 +4,9 @@ import Metrics from "../app/components/Metrics";
 import GrowthStory from "../app/components/GrowthStory";
 import EmployeeCard from "../app/components/EmployeeCard";
 import CTASection from "../app/components/CTASection";
-
+import VideoSection from "./components/VideoSection";
+import TeamSliderSection from "./components/TeamSection";
+import NewsletterSection from "./components/NewsletterSection";
 
 const App = () => {
   return (
@@ -14,6 +16,9 @@ const App = () => {
       <GrowthStory />
       <EmployeeCard />
       <CTASection />
+      <VideoSection/>
+      <TeamSliderSection/>
+      <NewsletterSection/>
     </div>
   );
 }
