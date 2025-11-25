@@ -1,11 +1,11 @@
 export default function VideoSection() {
   return (
-    <section className="bg-gradient-to-b from-[#0077B6] to-[#00B4D8] py-20 text-white">
+    <section className="bg-[#1373AC] py-20 text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-semibold mb-4">
           Stay Connected with Our Talent Community
         </h2>
-        <p className="text-lg max-w-2xl mx-auto mb-12">
+        <p className="text-2xl max-w-2xl mx-auto mb-12 ">
           Get exclusive access to new opportunities, company updates, and career insights with just a click.
         </p>
 
