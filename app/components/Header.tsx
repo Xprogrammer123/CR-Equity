@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,9 +44,11 @@ export default function Header() {
         </nav>
 
         {/* Desktop Apply Button */}
-        <button className="hidden md:block bg-sky-700 text-white font-semibold px-8 py-3 rounded-full hover:bg-sky-600 transition shadow-md">
-          Apply
-        </button>
+        <Link href="/auth/signup">
+          <button className="hidden md:block bg-sky-700 text-white font-semibold px-8 py-3 rounded-full hover:bg-sky-600 transition shadow-md">
+            Apply
+          </button>
+        </Link>
 
         {/* Mobile Hamburger */}
         <button
@@ -101,12 +104,14 @@ export default function Header() {
           </nav>
 
           <div className="px-6 mt-12">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="w-full bg-sky-700 text-white font-bold text-lg py-4 rounded-full hover:bg-sky-600 transition shadow-lg"
-            >
-              Apply Now
-            </button>
+            <Link href="/auth/signup">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-full bg-sky-700 text-white font-bold text-lg py-4 rounded-full hover:bg-sky-600 transition shadow-lg"
+              >
+                Apply Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>
