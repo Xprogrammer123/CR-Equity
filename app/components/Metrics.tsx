@@ -61,63 +61,61 @@ const metricsData = [
 const Metrics = () => {
   return (
     <section className="py-16 bg-gray-50">
-      <div className="container mx-auto">
-        <p className="flex items-center gap-2 justify-center mx-auto text-cyan-500 font-bold text-lg mb-5">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <p className="flex items-center gap-2 justify-center mx-auto text-cyan-500 font-bold text-base sm:text-lg mb-5">
           <Image src="/icon/chart2.svg" alt="Apply" width={24} height={24} />
           Company Performance
         </p>
 
-        <h2 className="text-center text-6xl font-bold mb-5">
-          <span className="text-[rgba(30,58,138,1)]">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
+          <span className="text-[rgba(30,58,138,1)] block">
             Driving Innovation Through
           </span>
-          <br />
-          <span className="text-cyan-500">Measurable Impact</span>
+          <span className="text-cyan-500 block">Measurable Impact</span>
         </h2>
 
-        <p className="text-gray-400 flex items-center max-w-3xl mx-auto font-semibold text-center mb-15 text-lg">
+        <p className="text-gray-400 flex items-center max-w-3xl mx-auto font-semibold text-center mb-12 text-sm sm:text-base md:text-lg px-2">
           Our growth metrics reflect not just business success, but the
           collective impact of brilliant minds working together to revolutionize
           commercial lending through AI innovation.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Metrics Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {metricsData.map((metric) => (
             <div
               key={metric.title}
-              className="bg-white p-6 rounded-lg shadow flex flex-col items-start gap-2"
+              className="bg-white p-5 sm:p-6 rounded-lg shadow flex flex-col items-start gap-2 transition-transform duration-300 hover:scale-[1.02]"
             >
               {/* Gradient div with icon */}
               <div
-                className="w-24 h-20 rounded-2xl flex items-center justify-center shadow-xl"
-                style={{
-                  background: metric.gradient,
-                }}
+                className="w-20 h-16 sm:w-24 sm:h-20 rounded-2xl flex items-center justify-center shadow-xl shrink-0"
+                style={{ background: metric.gradient }}
               >
                 <Image
                   src={metric.icon}
                   alt={metric.title}
-                  width={34}
-                  height={34}
+                  width={30}
+                  height={30}
+                  className="sm:w-[34px] sm:h-[34px]"
                 />
               </div>
 
               {/* Metric Title and Values */}
-              <h4 className="text-[#8EDEEC] text-lg font-semibold">
+              <h4 className="text-[#8EDEEC] text-base sm:text-lg font-semibold mt-2">
                 {metric.title}
               </h4>
-              <p className="text-5xl text-[#1370AA] font-bold mt-1">
+              <p className="text-4xl sm:text-5xl text-[#1370AA] font-bold mt-1">
                 {metric.value}
               </p>
-              <p className="text-gray-500 font-semibold text-sm mt-0">
+              <p className="text-gray-500 font-semibold text-xs sm:text-sm mt-0">
                 {metric.subtitle}
               </p>
-              <p className="text-[#0AA1C8] font-semibold text-sm mt-0 flex items-center gap-2">
+              <p className="text-[#0AA1C8] font-semibold text-xs sm:text-sm mt-0 flex items-center gap-2">
                 <span
-                  className="w-3 h-3 rounded-full shadow-2xl"
-                  style={{
-                    background: metric.gradient,
-                  }}
+                  className="w-2 h-2 sm:w-3 sm:h-3 rounded-full shadow-md"
+                  style={{ background: metric.gradient }}
                 ></span>
                 {metric.subsubtitle}
               </p>
@@ -128,8 +126,5 @@ const Metrics = () => {
     </section>
   );
 };
-
-
-
 
 export default Metrics;

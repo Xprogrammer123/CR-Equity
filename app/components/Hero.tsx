@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-[rgba(19,112,170,1)] to-[rgba(10,161,200,1)] text-white h-[100vh]">
+    <section className="bg-gradient-to-br from-[rgba(19,112,170,1)] to-[rgba(10,161,200,1)] text-white min-h-screen px-4 md:px-0 py-8">
       <Header />
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-0">
         <div className="flex-1">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Shape the Future of <br />
@@ -102,7 +102,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex-1 relative">
+        <div className="hidden md:block flex-1 relative">
           <img
             src="/heroimg.svg"
             alt="Team meeting"

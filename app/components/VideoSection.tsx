@@ -10,12 +10,14 @@ export default function VideoSection() {
         </p>
 
         <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
-          <div className="bg-gradient-to-br from-cyan-300 to-blue-400 h-96 flex items-center flex-col gap-6">
-            <div className="w-20 h-20 bg-white/30 rounded-full flex-center">
-              <span className="text-4xl ml-2">Play</span>
-            </div>
-            <p className="text-2xl font-medium">How to get started</p>
-          </div>
+          <iframe
+            src="https://www.youtube.com/embed/n5s-Gvv92E8?si=ZGlE_QHPZnxF_UCd"
+            title="How to get started"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="w-full h-[450px] md:h-[600px] lg:h-[500px]"
+          />
         </div>
       </div>
     </section>

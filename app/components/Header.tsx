@@ -1,28 +1,115 @@
+// app/components/Header.tsx
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  return (
-    <header className="w-[70%] mx-auto bg-white flex items-center justify-between py-2 px-8 rounded-sm shadow-sm mb-32">
-     
-      <div className="text-2xl font-bold text-blue-600">
-        <Image src="/logo.svg" alt="Logo" width={200} height={100} />
-      </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-      <nav className="flex items-center justify-center gap-15 mx-auto">
-        <a href="#" className="text-sky-700 font-medium hover:underline">
-          Careers
-        </a>
-        <a href="#" className="text-sky-700 font-medium hover:underline">
-          Success Story
-        </a>
-        <a href="#" className="text-sky-700 font-medium hover:underline">
-          Growth Pathways
-        </a>
-</nav>
-        <button className="ml-6 bg-sky-700 text-white font-semibold px-10 py-3 rounded-full hover:bg-sky-600 transition">
+  const navItems = [
+    { name: "Careers", href: "#" },
+    { name: "Success Story", href: "#" },
+    { name: "Growth Pathways", href: "#" },
+  ];
+
+  return (
+    <>
+      {/* Desktop + Tablet Header */}
+      <header className="w-full max-w-7xl mx-auto bg-white flex items-center justify-between py-4 px-6 md:px-12 lg:px-20 rounded-sm shadow-sm mb-20 md:mb-32">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={180}
+            height={80}
+            className="w-40 md:w-48"
+          />
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-12 flex-1 justify-center">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sky-700 font-medium hover:text-sky-800 hover:underline underline-offset-4 transition"
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
+
+        {/* Desktop Apply Button */}
+        <button className="hidden md:block bg-sky-700 text-white font-semibold px-8 py-3 rounded-full hover:bg-sky-600 transition shadow-md">
           Apply
         </button>
-      
-    </header>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="md:hidden p-2"
+          aria-label="Open menu"
+        >
+          <Menu className="w-8 h-8 text-sky-700" />
+        </button>
+      </header>
+
+      {/* Mobile Sidebar - Pure Tailwind Animation */}
+      <div
+        className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
+          isOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+      >
+        {/* Backdrop */}
+        <div
+          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
+            isOpen ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Sidebar Panel */}
+        <div
+          className={`absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-500 ease-out ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex items-center justify-between p-6 border-b">
+            <Image src="/logo.svg" alt="Logo" width={140} height={60} />
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition"
+            >
+              <X className="w-7 h-7 text-gray-700" />
+            </button>
+          </div>
+
+          <nav className="px-6 py-10 space-y-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="block text-2xl font-medium text-gray-800 hover:text-sky-700 transition"
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+
+          <div className="px-6 mt-12">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="w-full bg-sky-700 text-white font-bold text-lg py-4 rounded-full hover:bg-sky-600 transition shadow-lg"
+            >
+              Apply Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
