@@ -147,7 +147,7 @@ export default function SignupPage() {
                   placeholder="Enter your full name"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className={`w-full px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
+                  className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.fullName
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-blue-500"
@@ -171,7 +171,7 @@ export default function SignupPage() {
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
+                  className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.email
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-blue-500"
@@ -199,7 +199,7 @@ export default function SignupPage() {
                       ? "border-red-500 focus-within:border-red-500"
                       : "border-gray-300 focus-within:border-blue-500"
                   }`}
-                  inputClassName="px-2 md:px-3 py-1 md:py-1.5 rounded-lg text-xs md:text-sm focus:outline-none"
+                  inputClassName="px-4 md:px-5 py-2.5 md:py-4 rounded-lg text-xs md:text-sm focus:outline-none"
                   style={
                     {
                       "--react-international-phone-height": "36px",
@@ -222,7 +222,7 @@ export default function SignupPage() {
                   placeholder="Create a password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`w-full px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
+                  className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.password
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-blue-500"
@@ -246,7 +246,7 @@ export default function SignupPage() {
                   placeholder="Confirm your password"
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
-                  className={`w-full px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
+                  className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.confirmPassword
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-blue-500"
