@@ -162,7 +162,7 @@ export default function SignupPage() {
 
               {/* Email */}
               <div>
-                <label className="block text-gray-700 font-medium mb-1 text-sm">
+                <label className="block text-gray-700 font-medium mb-1 text-xs md:text-sm">
                   Email
                 </label>
                 <input
@@ -171,20 +171,20 @@ export default function SignupPage() {
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 rounded-lg border transition text-sm placeholder:text-gray-500 focus:outline-none ${
+                  className={`w-full px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.email
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-blue-500"
                   }`}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  <p className="text-red-500 text-xs mt-0.5">{errors.email}</p>
                 )}
               </div>
 
               {/* Phone Number */}
               <div>
-                <label className="block text-gray-700 font-medium mb-1 text-sm">
+                <label className="block text-gray-700 font-medium mb-1 text-xs md:text-sm">
                   Phone Number
                 </label>
                 <PhoneInput
@@ -194,20 +194,20 @@ export default function SignupPage() {
                     setPhone(phone);
                     setErrors((prev) => ({ ...prev, phone: "" }));
                   }}
-                  className={`w-full rounded-lg border transition ${
+                  className={`w-full rounded-lg border transition text-xs md:text-sm ${
                     errors.phone
                       ? "border-red-500 focus-within:border-red-500"
                       : "border-gray-300 focus-within:border-blue-500"
                   }`}
-                  inputClassName="px-3 py-2 rounded-lg text-sm focus:outline-none"
+                  inputClassName="px-2 md:px-3 py-1 md:py-1.5 rounded-lg text-xs md:text-sm focus:outline-none"
                   style={
                     {
-                      "--react-international-phone-height": "40px",
+                      "--react-international-phone-height": "36px",
                     } as React.CSSProperties
                   }
                 />
                 {errors.phone && (
-                  <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                  <p className="text-red-500 text-xs mt-0.5">{errors.phone}</p>
                 )}
               </div>
 
@@ -222,20 +222,22 @@ export default function SignupPage() {
                   placeholder="Create a password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 rounded-lg border transition text-sm placeholder:text-gray-500 focus:outline-none ${
+                  className={`w-full px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.password
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-blue-500"
                   }`}
                 />
                 {errors.password && (
-                  <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+                  <p className="text-red-500 text-xs mt-0.5">
+                    {errors.password}
+                  </p>
                 )}
               </div>
 
               {/* Confirm Password */}
               <div>
-                <label className="block text-gray-700 font-medium mb-1 text-sm">
+                <label className="block text-gray-700 font-medium mb-1 text-xs md:text-sm">
                   Confirm Password
                 </label>
                 <input
@@ -244,14 +246,14 @@ export default function SignupPage() {
                   placeholder="Confirm your password"
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 rounded-lg border transition text-sm placeholder:text-gray-500 focus:outline-none ${
+                  className={`w-full px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.confirmPassword
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-blue-500"
                   }`}
                 />
                 {errors.confirmPassword && (
-                  <p className="text-red-500 text-xs mt-1">
+                  <p className="text-red-500 text-xs mt-0.5">
                     {errors.confirmPassword}
                   </p>
                 )}
@@ -259,16 +261,16 @@ export default function SignupPage() {
 
               {/* PDF Upload */}
               <div>
-                <label className="block text-gray-700 font-medium mb-2 text-sm">
+                <label className="block text-gray-700 font-medium mb-1.5 md:mb-2 text-xs md:text-sm">
                   Upload Business Plan (PDF)
                 </label>
                 {!file ? (
-                  <label className="block border-2 border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer hover:border-blue-500 transition">
-                    <Upload className="w-8 h-8 mx-auto text-gray-400 mb-2" />
-                    <p className="text-gray-600 text-sm">
+                  <label className="block border-2 border-dashed border-gray-300 rounded-lg p-3 md:p-4 text-center cursor-pointer hover:border-blue-500 transition">
+                    <Upload className="w-6 md:w-8 h-6 md:h-8 mx-auto text-gray-400 mb-1.5 md:mb-2" />
+                    <p className="text-gray-600 text-xs md:text-sm">
                       Drag & drop your PDF here
                     </p>
-                    <p className="text-xs text-gray-400 mt-1">
+                    <p className="text-xs text-gray-400 mt-0.5 md:mt-1">
                       or click to select
                     </p>
                     <input
@@ -279,11 +281,11 @@ export default function SignupPage() {
                     />
                   </label>
                 ) : (
-                  <div className="flex items-center justify-between bg-green-50 border border-green-300 rounded-lg p-3">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium text-gray-800 text-sm">
+                  <div className="flex items-center justify-between bg-green-50 border border-green-300 rounded-lg p-2 md:p-3">
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <CheckCircle className="w-5 md:w-6 h-5 md:h-6 text-green-600 shrink-0" />
+                      <div className="min-w-0">
+                        <p className="font-medium text-gray-800 text-xs md:text-sm truncate">
                           {file.name}
                         </p>
                         <p className="text-xs text-gray-500">
@@ -294,21 +296,21 @@ export default function SignupPage() {
                     <button
                       type="button"
                       onClick={() => setFile(null)}
-                      className="text-red-600 hover:text-red-800 flex-shrink-0"
+                      className="text-red-600 hover:text-red-800 shrink-0 ml-2"
                     >
-                      <X className="w-5 h-5" />
+                      <X className="w-4 md:w-5 h-4 md:h-5" />
                     </button>
                   </div>
                 )}
               </div>
 
               {/* Terms */}
-              <div className="flex items-start gap-2 pt-2">
+              <div className="flex items-start gap-2 pt-1.5 md:pt-2">
                 <input
                   type="checkbox"
-                  className="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0"
+                  className="mt-0.5 w-3 md:w-4 h-3 md:h-4 accent-blue-600 shrink-0"
                 />
-                <label className="text-xs text-gray-600">
+                <label className="text-xs md:text-xs text-gray-600 leading-tight">
                   By creating your account in Crequity.ai, you agree to our{" "}
                   <a href="#" className="text-blue-600 underline">
                     Terms
@@ -322,12 +324,12 @@ export default function SignupPage() {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-base md:text-lg py-2.5 md:py-3 rounded-lg transition transform hover:scale-105 shadow-lg"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm md:text-base py-2 md:py-2.5 lg:py-3 rounded-lg transition transform hover:scale-105 shadow-lg mt-2"
               >
                 Sign up
               </button>
 
-              <p className="text-center text-gray-600 text-sm">
+              <p className="text-center text-gray-600 text-xs md:text-sm mt-2">
                 Already have account?{" "}
                 <a href="#" className="text-blue-600 font-bold hover:underline">
                   Login
