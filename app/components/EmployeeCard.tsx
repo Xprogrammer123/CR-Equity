@@ -23,7 +23,8 @@ const EmployeeCard = () => {
       </div>
 
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-6 md:gap-10">
-        <div className="flex-1 w-full">
+        {/* Left: Text content - appears second on mobile, first on desktop */}
+        <div className="flex-1 w-full order-last md:order-first">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-14 md:w-16 h-14 md:h-16 bg-gray-100 rounded-full flex items-center justify-center font-bold text-blue-600 bg-gradient-to-br from-[#4C63A2] to-[#1C253C] flex-shrink-0">
               <Image
@@ -46,7 +47,8 @@ const EmployeeCard = () => {
 
           <div className="max-w-md mb-6">
             <p className="text-gray-500 text-sm md:text-base font-semibold">
-              "Apply advanced analytics to financial challenges while building a world-class team."
+              "Apply advanced analytics to financial challenges while building a
+              world-class team."
             </p>
           </div>
           {/* Info Cards */}
@@ -93,8 +95,9 @@ const EmployeeCard = () => {
             </p>
           </div>
         </div>
-        {/* Left: Image */}
-        <div className="flex-1">
+
+        {/* Right: Image - appears first on mobile, last on desktop */}
+        <div className="flex-1 w-full order-first md:order-last">
           <img
             src="/mrrobert.png"
             alt="Employee portrait"

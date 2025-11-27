@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"
 const GrowthStory = () => {
   return (
     <section className="bg-gray-50 py-12 md:py-20 text-center px-4">
@@ -22,7 +23,7 @@ const GrowthStory = () => {
             />
             <span>View Growth Pathways</span>
           </button>
-          <button className="bg-[#0AA1C8] text-white rounded-xl hover:bg-blue-500 transition px-6 py-2 flex items-center gap-2 w-full md:w-auto justify-center">
+          <Link className="bg-[#0AA1C8] text-white rounded-xl hover:bg-blue-500 transition px-6 py-2 flex items-center gap-2 w-full md:w-auto justify-center" href="/auth/signup">
             <Image
               src="/icon/user.svg"
               alt="Join our Team"
@@ -30,7 +31,7 @@ const GrowthStory = () => {
               height={24}
             />
             <span>Join our Team</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

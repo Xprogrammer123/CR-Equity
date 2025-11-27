@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Image from "next/image";
-
+import Link from "next/link"
 const Hero = () => {
   return (
     <section className="bg-gradient-to-br from-[rgba(19,112,170,1)] to-[rgba(10,161,200,1)] text-white min-h-screen px-4 md:px-0 py-8">
@@ -22,10 +22,10 @@ const Hero = () => {
             <br /> cutting-edge artificial intelligence.
           </p>
           <div className="flex gap-4">
-            <button className="bg-white text-sky-600 px-6 py-3 rounded-xl flex items-center gap-2 font-semibold">
+            <Link className="bg-white text-sky-600 px-6 py-3 rounded-xl flex items-center gap-2 font-semibold" href="/auth/signup" >
               <Image src="/icon/plane.svg" alt="Apply" width={24} height={24} />{" "}
               Apply
-            </button>
+            </Link>
             <button className="px-6 py-3 rounded-xl bg-[rgba(10,161,200,1)]  border border-white flex items-center gap-2 font-semibold">
               <Image src="/icon/play.svg" alt="Apply" width={24} height={24} />
               Watch success story
@@ -58,7 +58,7 @@ const Hero = () => {
                 <p className="text-sky-700">+27% this quater</p>
               </div>
 
-              <div className="space-y-2 p-3">
+              <div className="space-y-2 p-3 bg-white/30 rounded-lg ">
                 <p className="flex items-center gap-2">
                   <Image
                     src="/icon/book.svg"
@@ -69,10 +69,9 @@ const Hero = () => {
                   Open positions
                 </p>
                 <p className="font-semibold text-4xl text-white/60">18</p>
-                <p className="text-sky-700">+27% this quater</p>
+                <p className="text-sky-700">Across 6 departments</p>
               </div>
-
-              <div className="space-y-2 p-3">
+              <div className="space-y-2 p-3 bg-white/30 rounded-lg">
                 <p className="flex items-center gap-2">
                   <Image
                     src="/icon/chart.svg"
@@ -83,9 +82,11 @@ const Hero = () => {
                   Employee Growth
                 </p>
                 <p className="font-semibold text-4xl text-white/60">156%</p>
-                <p className="text-sky-700">+27% this quater</p>
+                <p className="text-sky-700">Year after Year</p>
               </div>
-              <div className="space-y-2 p-3">
+
+
+              <div className="space-y-2 p-3 bg-white/30 rounded-lg">
                 <p className="flex items-center gap-2">
                   <Image
                     src="/icon/heart.svg"
@@ -96,7 +97,7 @@ const Hero = () => {
                   Retention rate
                 </p>
                 <p className="font-semibold text-4xl text-white/60">94%</p>
-                <p className="text-sky-700">+27% this quater</p>
+                <p className="text-sky-700">Industry Leading</p>
               </div>
             </div>
           </div>

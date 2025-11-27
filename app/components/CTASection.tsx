@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link"
 const CTASection = () => {
   return (
     <section className="bg-gray-50 py-12 md:py-20 text-center px-4">
@@ -17,9 +17,9 @@ const CTASection = () => {
           finance while accelerating your career growth.
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <button className="bg-white text-[#1370AA] px-6 py-3 md:py-4 font-semibold shadow-2xl rounded-lg transition w-full md:w-auto">
+          <Link className="bg-white text-[#1370AA] px-6 py-3 md:py-4 font-semibold shadow-2xl rounded-lg transition w-full md:w-auto" href="/auth/signup">
             Explore open opportunities
-          </button>
+          </Link>
           <button className="text-white px-6 py-3 md:py-4 rounded-lg bg-[#1370AA] transition font-semibold shadow-2xl w-full md:w-auto">
             Watch Success Stories
           </button>
