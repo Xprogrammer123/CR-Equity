@@ -7,7 +7,7 @@ import { ChevronDown, Upload, X, CheckCircle } from "lucide-react";
 import { PhoneInput } from "react-international-phone";
 import { z } from "zod";
 import "react-international-phone/style.css";
-import Link from "next/link"
+import Link from "next/link";
 
 // Zod validation schema
 const signupSchema = z
@@ -129,8 +129,8 @@ export default function SignupPage() {
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1.86fr_1fr] gap-0 items-stretch min-h-screen">
-          {/* LEFT: Form - 65% on desktop, 100% on mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-[0.67fr_1.33fr] gap-0 items-stretch min-h-screen">
+          {/* LEFT: Form - 40% on desktop, 100% on mobile */}
           <div className="lg:col-span-1 py-6 md:py-8 lg:py-8 px-3 md:px-6">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-1">
               Hi
@@ -348,10 +348,10 @@ export default function SignupPage() {
                   <button
                     type="button"
                     onClick={handleGoogleLogin}
-                    className="flex items-center justify-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-xs md:text-sm py-2.5 md:py-3 rounded-lg transition"
+                    className="flex items-center justify-center gap-3 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-sm md:text-base py-3 md:py-3.5 rounded-lg transition"
                   >
                     <svg
-                      className="w-4 md:w-5 h-4 md:h-5"
+                      className="w-5 h-5"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
@@ -372,17 +372,17 @@ export default function SignupPage() {
                         fill="#EA4335"
                       />
                     </svg>
-                    <span className="hidden sm:inline">Google</span>
+                    Google
                   </button>
 
                   {/* LinkedIn Button */}
                   <button
                     type="button"
                     onClick={handleLinkedInLogin}
-                    className="flex items-center justify-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-xs md:text-sm py-2.5 md:py-3 rounded-lg transition"
+                    className="flex items-center justify-center gap-3 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-sm md:text-base py-3 md:py-3.5 rounded-lg transition"
                   >
                     <svg
-                      className="w-4 md:w-5 h-4 md:h-5"
+                      className="w-5 h-5"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
@@ -391,7 +391,7 @@ export default function SignupPage() {
                         fill="#0A66C2"
                       />
                     </svg>
-                    <span className="hidden sm:inline">LinkedIn</span>
+                    LinkedIn
                   </button>
                 </div>
               </div>
@@ -408,14 +408,14 @@ export default function SignupPage() {
             </form>
           </div>
 
-          {/* RIGHT: Hero Image - 35% */}
+          {/* RIGHT: Hero Image - 60% */}
           <div className="hidden lg:block lg:col-span-1 h-full">
             <Image
               src="/cr.jpeg"
               alt="Crequity.ai Platform"
               width={1800}
               height={1600}
-              className="w-full h-full object-cover rounded-none"
+              className="w-full h-full object-contain rounded-none"
               priority
             />
           </div>

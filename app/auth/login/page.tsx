@@ -80,8 +80,8 @@ export default function LoginPage() {
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1.86fr_1fr] gap-0 items-stretch min-h-screen">
-          {/* LEFT: Form - 65% on desktop, 100% on mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-[0.67fr_1.33fr] gap-0 items-stretch min-h-screen">
+          {/* LEFT: Form - 40% on desktop, 100% on mobile */}
           <div className="lg:col-span-1 py-6 md:py-8 lg:py-8 px-3 md:px-6 lg:px-8 flex flex-col justify-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-1">
               Welcome Back
@@ -182,7 +182,7 @@ export default function LoginPage() {
                   <button
                     type="button"
                     onClick={handleGoogleLogin}
-                    className="flex items-center justify-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-xs md:text-sm py-2.5 md:py-3 rounded-lg transition"
+                    className="flex items-center justify-center gap-3 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-sm md:text-base py-3 md:py-3.5 rounded-lg transition"
                   >
                     <svg
                       className="w-4 md:w-5 h-4 md:h-5"
@@ -213,7 +213,7 @@ export default function LoginPage() {
                   <button
                     type="button"
                     onClick={handleLinkedInLogin}
-                    className="flex items-center justify-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-xs md:text-sm py-2.5 md:py-3 rounded-lg transition"
+                    className="flex items-center justify-center gap-3 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-sm md:text-base py-3 md:py-3.5 rounded-lg transition"
                   >
                     <svg
                       className="w-4 md:w-5 h-4 md:h-5"
@@ -242,14 +242,14 @@ export default function LoginPage() {
             </form>
           </div>
 
-          {/* RIGHT: Hero Image - 35% */}
+          {/* RIGHT: Hero Image - 60% */}
           <div className="hidden lg:block lg:col-span-1 h-full">
             <Image
               src="/cr.jpeg"
               alt="Crequity.ai Platform"
               width={1800}
               height={1600}
-              className="w-full h-full object-cover rounded-none"
+              className="w-full h-full object-contain rounded-none"
               priority
             />
           </div>
