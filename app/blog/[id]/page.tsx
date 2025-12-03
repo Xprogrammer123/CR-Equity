@@ -55,7 +55,6 @@ export async function generateMetadata({ params }: MetadataParams) {
   };
 }
 
-/// Fixed (Correct for App Router)
 export default async function BlogDetails({ params }: BlogParams) {
   const blog = blogsData.blogs.find((b: Blog) => b.id === params.id);
   
