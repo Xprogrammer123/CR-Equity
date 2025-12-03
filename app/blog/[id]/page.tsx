@@ -7,7 +7,6 @@ import CTA from "../components/cts";
 import blogsData from "@/data/blogs.json";
 
 
-// ✅ Define TypeScript types
 interface Blog {
   id: string;
   title: string;
@@ -56,9 +55,10 @@ export async function generateMetadata({ params }: MetadataParams) {
   };
 }
 
-// ✅ Main component
-export default function BlogDetails({ params }: BlogParams) {
+/// Fixed (Correct for App Router)
+export default async function BlogDetails({ params }: BlogParams) {
   const blog = blogsData.blogs.find((b: Blog) => b.id === params.id);
+  
 
   if (!blog) {
     notFound();

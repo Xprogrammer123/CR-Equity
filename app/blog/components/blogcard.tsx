@@ -28,7 +28,12 @@ export default function BlogCard({ blog }: BlogCardProps) {
   });
 
   return (
-    <div className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 card-hover">
+    // 💡 CHANGE: Wrap the entire card in a Next.js Link component
+    // Added 'block' class to make the Link behave like a div for full card clickability
+    <Link
+      href={`/blog/${blog.id}`}
+      className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 card-hover block"
+    >
       {/* Blog Image */}
       <div className="relative h-56 overflow-hidden">
         <Image
@@ -78,18 +83,17 @@ export default function BlogCard({ blog }: BlogCardProps) {
         </div>
 
         {/* Title */}
+        {/* 💡 CHANGE: Removed the nested Link, as the parent is now the Link */}
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-          <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+          {blog.title}
         </h3>
 
         {/* Excerpt */}
         <p className="text-gray-600 mb-4 line-clamp-2">{blog.excerpt}</p>
 
         {/* Read More */}
-        <Link
-          href={`/blog/${blog.id}`}
-          className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300"
-        >
+        {/* 💡 CHANGE: Changed Link to a span, as the parent is now the Link */}
+        <span className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
           Read More
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -103,8 +107,8 @@ export default function BlogCard({ blog }: BlogCardProps) {
               d="M4 8a.5.5 0 0 1 .5-.5h5.793..."
             />
           </svg>
-        </Link>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }
