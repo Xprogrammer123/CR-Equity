@@ -32,7 +32,7 @@ export default function BlogPost({ blog }: { blog: any }) {
 
       {/* Header */}
       <header className="mb-12">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 leading-tight">
           {blog.title}
         </h1>
 
@@ -64,6 +64,27 @@ export default function BlogPost({ blog }: { blog: any }) {
             <p className="text-lg leading-relaxed text-gray-700">{section.body}</p>
           </div>
         ))}
+      </div>
+      <div>
+  {isRealImage ? (
+          <Image
+            src={blog.thumb}
+            alt={blog.title}
+            width={1200}
+            height={600}
+            className="w-full object-cover"
+            sizes="100vw"
+            priority
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/OhZPQAJOwPqTqL7nQAAAABJRU5ErkJggg=="
+          />
+        ) : (
+          <div className="bg-gray-300 w-full h-96 md:h-[500px] flex items-center justify-center">
+            <span className="text-6xl md:text-7xl font-extrabold text-gray-700 tracking-wider">
+              {blog.thumb || '750×450'}
+            </span>
+          </div>
+        )}
       </div>
     </>
   );
