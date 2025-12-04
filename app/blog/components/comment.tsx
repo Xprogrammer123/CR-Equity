@@ -22,7 +22,7 @@ export default function Comment({ comment }: CommentProps) {
         <span className="text-sm text-gray-500">{comment.date}</span>
       </div>
 
-      {/* Body */}
+     
       <p className="text-gray-700 leading-relaxed">{comment.body}</p>
     </div>
   );

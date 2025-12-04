@@ -53,7 +53,7 @@ function ClientComments({ slug }: { slug: string }) {
 
   return (
     <div className="mt-20 border-t pt-10">
-      <h2 className="text-3xl font-bold mb-8">
+      <h2 className="text-3xl font-bold mb-8 ">
         Comments ({comments.length})
       </h2>
 
