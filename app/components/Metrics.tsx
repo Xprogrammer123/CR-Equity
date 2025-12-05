@@ -63,7 +63,7 @@ const Metrics = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <p className="flex items-center gap-2 justify-center mx-auto text-cyan-500 font-bold text-base sm:text-lg mb-5">
+        <p className="flex items-center gap-2 justify-center mx-auto text-blue-500 font-bold text-base sm:text-lg mb-5">
           <Image src="/icon/chart2.svg" alt="Apply" width={24} height={24} />
           Company Performance
         </p>
@@ -72,7 +72,7 @@ const Metrics = () => {
           <span className="text-[rgba(30,58,138,1)] block">
             Driving Innovation Through
           </span>
-          <span className="text-cyan-500 block">Measurable Impact</span>
+          <span className="text-blue-500 block">Measurable Impact</span>
         </h2>
 
         <p className="text-gray-400 flex items-center max-w-3xl mx-auto font-semibold text-center mb-12 text-sm sm:text-base md:text-lg px-2">

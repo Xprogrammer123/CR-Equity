@@ -39,8 +39,8 @@ export default function TeamSliderCustom() {
   return (
     <section className="py-24 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-5xl font-bold text-[#0066B2] mb-6">Meet The Team</h2>
-        <p className="text-md text-[#0066B2]/80 max-w-md mx-auto mb-20">
+        <h2 className="text-5xl font-bold text-black mb-6">Meet The Team</h2>
+        <p className="text-md text-black max-w-md mx-auto mb-20">
           Clarity gives you the blocks & components you need to create a truly
           professional website, landing page or admin panel for your SaaS.
         </p>

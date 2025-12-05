@@ -14,12 +14,13 @@ const GrowthStory = () => {
           financial technology sector.
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <button className="bg-[#1370AA] text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition flex items-center gap-2 w-full md:w-auto justify-center">
+          <button className="bg-white border border-blue-500 text-blue-500 px-6 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2 w-full md:w-auto justify-center">
             <Image
               src="/icon/question.svg"
               alt="View Growth Pathways"
               width={24}
               height={24}
+              className="bg-blue-500"
             />
             <span>View Growth Pathways</span>
           </button>

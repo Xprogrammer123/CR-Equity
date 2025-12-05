@@ -5,11 +5,11 @@ const EmployeeCard = () => {
     <section className="bg-white py-12 md:py-20 px-4">
       {/* Top centered texts */}
       <div className="text-center mb-12">
-        <h3 className="text-[#1370AA] text-sm md:text-lg font-semibold mb-2 flex items-center justify-center">
+        <h3 className="text-blue-500 text-sm md:text-lg font-semibold mb-2 flex items-center justify-center">
           Employee Success Story
         </h3>
 
-        <h2 className="text-2xl md:text-4xl text-[#1370AA] font-bold mb-4">
+        <h2 className="text-2xl md:text-4xl text-blue-500 font-bold mb-4">
           Career Transformations That
           <br />
           <span className="text-[#0AA1C8]">Define Our Culture</span>
@@ -26,7 +26,7 @@ const EmployeeCard = () => {
         {/* Left: Text content - appears second on mobile, first on desktop */}
         <div className="flex-1 w-full order-last md:order-first">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 md:w-16 h-14 md:h-16 bg-gray-100 rounded-full flex items-center justify-center font-bold text-blue-600 bg-gradient-to-br from-[#4C63A2] to-[#1C253C] flex-shrink-0">
+            <div className="w-14 md:w-16 h-14 md:h-16 bg-gray-100 rounded-full flex items-center justify-center font-bold text-blue-500 bg-gradient-to-br from-[#4C63A2] to-[#1C253C] flex-shrink-0">
               <Image
                 src="/icon/question.svg"
                 alt="MR Robert Stewart"
@@ -36,34 +36,34 @@ const EmployeeCard = () => {
               />
             </div>
             <div>
-              <p className="font-bold text-lg md:text-2xl text-[#1370AA]">
+              <p className="font-bold text-lg md:text-2xl text-blue-500">
                 Robert Stewart
               </p>
-              <p className="text-sm md:text-lg text-gray-500 font-semibold">
+              <p className="text-sm md:text-lg text-black font-semibold">
                 Founder, MD
               </p>
             </div>
           </div>
 
           <div className="max-w-md mb-6">
-            <p className="text-gray-500 text-sm md:text-base font-semibold">
+            <p className="text-black text-sm md:text-base font-semibold">
               "Apply advanced analytics to financial challenges while building a
               world-class team."
             </p>
           </div>
           {/* Info Cards */}
           <div className="grid grid-cols-1 gap-7 mb-8">
-            <div className="bg-[#D9D9D9] px-4 py-4 rounded-xl w-72 ">
+            <div className="bg-gray-100 px-4 py-4 rounded-xl w-72 ">
               <p className="text-4xl font-semibold text-[#1370AA] mb-2">
                 18 months
               </p>
-              <p className="text-gray-500 text-lg">Career Growth Period</p>
+              <p className="text-black text-lg">Career Growth Period</p>
             </div>
-            <div className="bg-[#D9D9D9] px-4 py-4 rounded-xl w-72 ">
+            <div className="bg-gray-100 px-4 py-4 rounded-xl w-72 ">
               <p className="text-4xl font-semibold text-[#1370AA] mb-2">
                 AI EQUITY
               </p>
-              <p className="text-gray-500 text-lg">Department</p>
+              <p className="text-black text-lg">Department</p>
             </div>
           </div>
 
@@ -79,10 +79,10 @@ const EmployeeCard = () => {
               />
               Key Achievement
             </p>
-            <p className="font-semibold text-gray-500 text-lg">
+            <p className="font-semibold text-black text-lg">
               Led development of 3 production AI models
             </p>
-            <p className="text-gray-500 mt-2 flex items-center gap-2 font-semibold text-lg text-center">
+            <p className="text-black mt-2 flex items-center gap-2 font-semibold text-lg text-center">
               <Image
                 src="/icon/arrow.svg"
                 alt="MR Robert Stewart"

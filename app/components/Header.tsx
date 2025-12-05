@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop + Tablet Header */}
-      <header className="w-full max-w-7xl mx-auto bg-white flex items-center justify-between py-4 px-6 md:px-12 lg:px-20 rounded-sm shadow-sm mb-20 md:mb-32">
+      <header className="w-full max-w-[98%] mx-auto bg-gray-100 flex items-center justify-between py-4 px-2 md:px-12 lg:px-20 rounded-sm mb-20 md:mb-32">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image
@@ -31,12 +31,12 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-12 flex-1 justify-center">
+        <nav className="hidden md:flex items-center gap-12 flex-1 justify-center bg-white max-w-2xl p-2 rounded-full">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sky-700 font-medium hover:text-sky-800 hover:underline underline-offset-4 transition"
+              className="text-gray-400 font-semibold hover:text-sky-800 hover:underline underline-offset-4 transition"
             >
               {item.name}
             </a>
@@ -45,7 +45,7 @@ export default function Header() {
 
         {/* Desktop Apply Button */}
         <Link href="/auth/signup">
-          <button className="hidden md:block bg-sky-700 text-white font-semibold px-8 py-3 rounded-full hover:bg-sky-600 transition shadow-md">
+          <button className="hidden md:block bg-blue-500 text-white font-semibold px-10 py-1 rounded-full hover:bg-sky-600 transition shadow-md">
             Apply
           </button>
         </Link>
