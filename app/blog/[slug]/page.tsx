@@ -54,7 +54,7 @@ export default async function BlogDetail({
               </svg>
             </div>
 
-            {/* Recent Blogs Title */}
+           
             <h3 className="text-2xl font-bold mb-8 text-black flex-shrink-0">
               Recent Blogs
             </h3>
