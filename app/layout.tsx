@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const raleway = Raleway({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-raleway",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+ variable: "--font-space-grotesk",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
       </head>
-      <body className={`${raleway.variable} font-sans antialiased`}>
+      <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

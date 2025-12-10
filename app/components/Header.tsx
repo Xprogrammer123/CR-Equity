@@ -45,7 +45,7 @@ export default function Header() {
 
         {/* Desktop Apply Button */}
         <Link href="/auth/signup">
-          <button className="hidden md:block bg-blue-500 text-white font-semibold px-10 py-1 rounded-full hover:bg-sky-600 transition shadow-md">
+          <button className="hidden md:block bg-[#004DFB] text-white font-semibold px-10 py-1 rounded-full hover:bg-sky-600 transition shadow-md">
             Apply
           </button>
         </Link>

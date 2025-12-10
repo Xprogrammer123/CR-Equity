@@ -53,9 +53,7 @@ function ClientComments({ slug }: { slug: string }) {
 
   return (
     <div className="mt-20 border-t pt-10">
-      <h2 className="text-3xl font-bold mb-8 ">
-        Comments ({comments.length})
-      </h2>
+      <h2 className="text-3xl font-bold mb-8 ">Comments ({comments.length})</h2>
 
       {/* Comment Form */}
       <form
@@ -66,13 +64,13 @@ function ClientComments({ slug }: { slug: string }) {
           <input
             {...register("author")}
             placeholder="Your name (optional)"
-            className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#004DFB]"
           />
           <textarea
             {...register("body", { required: true })}
             rows={4}
             placeholder="Share your thoughts..."
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#004DFB] resize-none"
             required
           />
           <button

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 const GrowthStory = () => {
   return (
     <section className="bg-gray-50 py-12 md:py-20 text-center px-4">
@@ -14,17 +14,20 @@ const GrowthStory = () => {
           financial technology sector.
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <button className="bg-white border border-blue-500 text-blue-500 px-6 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2 w-full md:w-auto justify-center">
+          <button className="bg-white border border-[#004DFB] text-[#004DFB] px-6 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2 w-full md:w-auto justify-center">
             <Image
               src="/icon/question.svg"
               alt="View Growth Pathways"
               width={24}
               height={24}
-              className="bg-blue-500"
+              className="bg-[#004DFB]"
             />
             <span>View Growth Pathways</span>
           </button>
-          <Link className="bg-[#0AA1C8] text-white rounded-xl hover:bg-blue-500 transition px-6 py-2 flex items-center gap-2 w-full md:w-auto justify-center" href="/auth/signup">
+          <Link
+            className="bg-[#004DFB] text-white rounded-xl hover:bg-[#004DFB] transition px-6 py-2 flex items-center gap-2 w-full md:w-auto justify-center"
+            href="/auth/signup"
+          >
             <Image
               src="/icon/user.svg"
               alt="Join our Team"

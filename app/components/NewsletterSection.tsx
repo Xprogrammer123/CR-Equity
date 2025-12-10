@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function NewsletterSection() {
   return (
-    <section className="bg-gradient-to-b from-[#0077B6] to-[#0096C7] py-20">
+    <section className="bg-gradient-to-b from-[#004DFB] to-[#0096C7] py-20">
       <div className="max-w-4xl mx-auto px-6">
         <div className="bg-white/30 p-12 text-center text-white shadow-xl">
           <h2 className="text-4xl font-semibold mb-4">

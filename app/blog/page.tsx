@@ -66,7 +66,7 @@ export default function BlogPage() {
               placeholder="Search posts..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-6 py-3.5 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all placeholder-gray-500 text-gray-900"
+              className="w-full pl-12 pr-6 py-3.5 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-[#004DFB] focus:bg-white transition-all placeholder-gray-500 text-gray-900"
             />
             {searchQuery && (
               <button
@@ -77,7 +77,6 @@ export default function BlogPage() {
               </button>
             )}
           </div>
-
         </div>
       </header>
 

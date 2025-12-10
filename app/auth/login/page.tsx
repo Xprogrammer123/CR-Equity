@@ -111,7 +111,7 @@ export default function LoginPage() {
                   className={`w-full px-4 md:px-5 py-3 md:py-4 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.email
                       ? "border-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:border-blue-500"
+                      : "border-gray-300 focus:border-[#004DFB]"
                   }`}
                 />
                 {errors.email && (
@@ -133,7 +133,7 @@ export default function LoginPage() {
                   className={`w-full px-4 md:px-5 py-3 md:py-4 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.password
                       ? "border-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:border-blue-500"
+                      : "border-gray-300 focus:border-[#004DFB]"
                   }`}
                 />
                 {errors.password && (

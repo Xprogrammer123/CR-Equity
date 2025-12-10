@@ -159,7 +159,7 @@ export default function SignupPage() {
                   className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.fullName
                       ? "border-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:border-blue-500"
+                      : "border-gray-300 focus:border-[#004DFB]"
                   }`}
                 />
                 {errors.fullName && (
@@ -183,7 +183,7 @@ export default function SignupPage() {
                   className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.email
                       ? "border-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:border-blue-500"
+                      : "border-gray-300 focus:border-[#004DFB]"
                   }`}
                 />
                 {errors.email && (
@@ -206,7 +206,7 @@ export default function SignupPage() {
                   className={`w-full rounded-lg border transition text-xs md:text-sm ${
                     errors.phone
                       ? "border-red-500 focus-within:border-red-500"
-                      : "border-gray-300 focus-within:border-blue-500"
+                      : "border-gray-300 focus-within:border-[#004DFB]"
                   }`}
                   inputClassName="px-4 md:px-5 py-2.5 md:py-4 rounded-lg text-xs md:text-sm focus:outline-none"
                   style={
@@ -234,7 +234,7 @@ export default function SignupPage() {
                   className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.password
                       ? "border-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:border-blue-500"
+                      : "border-gray-300 focus:border-[#004DFB]"
                   }`}
                 />
                 {errors.password && (
@@ -258,7 +258,7 @@ export default function SignupPage() {
                   className={`w-full px-4 md:px-5 py-3 md:py-5 rounded-lg border transition text-xs md:text-sm placeholder:text-gray-500 focus:outline-none ${
                     errors.confirmPassword
                       ? "border-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:border-blue-500"
+                      : "border-gray-300 focus:border-[#004DFB]"
                   }`}
                 />
                 {errors.confirmPassword && (
@@ -274,7 +274,7 @@ export default function SignupPage() {
                   Upload Business Plan (PDF)
                 </label>
                 {!file ? (
-                  <label className="block border-2 border-dashed border-gray-300 rounded-lg p-3 md:p-4 text-center cursor-pointer hover:border-blue-500 transition">
+                  <label className="block border-2 border-dashed border-gray-300 rounded-lg p-3 md:p-4 text-center cursor-pointer hover:border-[#004DFB] transition">
                     <Upload className="w-6 md:w-8 h-6 md:h-8 mx-auto text-gray-400 mb-1.5 md:mb-2" />
                     <p className="text-gray-600 text-xs md:text-sm">
                       Drag & drop your PDF here

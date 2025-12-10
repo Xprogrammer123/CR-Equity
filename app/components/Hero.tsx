@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="flex-1">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Shape the Future of <br />
-            <span className="bg-blue-500 bg-clip-text text-transparent">
+            <span className="bg-[#004DFB] bg-clip-text text-transparent">
               AI-Driven Finance
             </span>
           </h1>
@@ -23,13 +23,13 @@ const Hero = () => {
           </p>
           <div className="flex gap-4">
             <Link
-              className="bg-white text-blue-500 px-6 py-3 rounded-xl flex items-center gap-2 font-semibold"
+              className="bg-white text-[#004DFB] px-6 py-3 rounded-xl flex items-center gap-2 font-semibold"
               href="/auth/signup"
             >
               <Image src="/icon/plane.svg" alt="Apply" width={24} height={24} />{" "}
               Apply
             </Link>
-            <button className="px-6 py-3 rounded-xl bg-blue-500  border border-white flex items-center gap-2 font-semibold text-white">
+            <button className="px-6 py-3 rounded-xl bg-[#004DFB]  border border-white flex items-center gap-2 font-semibold text-white">
               <Image src="/icon/play.svg" alt="Apply" width={24} height={24} />
               Watch success story
             </button>
@@ -39,10 +39,10 @@ const Hero = () => {
             <div className="flex items-center justify-between">
               <h3 className="font-bold text-xl">Live Company Metrics</h3>
               <div className="flex items-center gap-1">
-                <span className="w-2 h-2 rounded-full border border-blue-500 bg-white"></span>
-                <span className="w-2 h-2 rounded-full border border-blue-500 bg-white"></span>
-                <span className="w-2 h-2 rounded-full border border-blue-500 bg-white"></span>
-                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                <span className="w-2 h-2 rounded-full border border-[#004DFB] bg-white"></span>
+                <span className="w-2 h-2 rounded-full border border-[#004DFB] bg-white"></span>
+                <span className="w-2 h-2 rounded-full border border-[#004DFB] bg-white"></span>
+                <span className="w-2 h-2 rounded-full bg-[#004DFB]"></span>
               </div>
             </div>
 
