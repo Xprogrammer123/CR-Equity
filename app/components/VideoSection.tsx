@@ -1,6 +1,6 @@
 export default function VideoSection() {
   return (
-    <section className="bg-[#1373AC] py-20 text-white">
+    <section className="bg-[#004DFB] py-20 text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-semibold mb-4">
           Stay Connected with Our Talent Community

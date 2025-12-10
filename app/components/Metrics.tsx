@@ -69,7 +69,7 @@ const Metrics = () => {
         </p>
 
         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-          <span className="text-[rgba(30,58,138,1)] block">
+          <span className="text-[#004DFB] block">
             Driving Innovation Through
           </span>
           <span className="text-[#004DFB] block">Measurable Impact</span>
